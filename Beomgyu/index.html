@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TXT Pendant</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main id="app" class="app is-intro">
+    <!-- INTRO -->
+    <section id="intro" class="scene scene--intro" role="button" tabindex="0" aria-label="화면을 터치하여 시작">
+      <div class="bg"></div>
+      <div class="stars"></div>
+
+      <canvas id="fx" class="fx" aria-hidden="true"></canvas>
+
+      <div id="rippleLayer" class="ripple-layer" aria-hidden="true"></div>
+      <div id="centerGlow" class="center-glow" aria-hidden="true"></div>
+      <div id="whiteout" class="whiteout" aria-hidden="true"></div>
+
+      <div class="hint" aria-hidden="true">
+        <span class="hint__dot"></span>
+        <span class="hint__text">Tap</span>
+      </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section id="videoScene" class="scene scene--video" aria-label="영상">
+      <!-- ✅ 멤버 배경(블러) -->
+      <div id="memberBg" class="member-bg" aria-hidden="true"></div>
+      <div class="member-bg__shade" aria-hidden="true"></div>
+
+      <div class="card">
+        <h1 class="title">BEOMGYU</h1>
+        <p class="subtitle" id="memberLine">TOMORROW X TOGETHER</p>
+
+        <div class="videoWrap">
+          <video id="introVideo" class="video" playsinline controls preload="metadata">
+            <source src="./assets/Beomgyu.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <p class="note">2001.03.13 • 최범규</p>
+      </div>
+    </section>
+  </main>
+  
+  <audio id="tapSfx" preload="auto" src="./assets/Light Sound.mp3"></audio>
+  <script src="./script.js"></script>
+</body>
+</html>
